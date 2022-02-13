@@ -1,0 +1,26 @@
+{{ define "main" }}
+<meta from="index.html"/>
+<h1 class="hugo-home-title">{{ .Title }}</h1>
+{{ .Content }}
+<pre>
+ {{ printf "%+#v" .Title
+ }}
+</pre>
+
+<div class="hugo-first-10-posts">
+{{ range first 10 .Site.RegularPages }}
+    <article>
+     
+      <div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ .Summary | plainify | safeHTML }}
+      </div>
+      {{ if .Truncated }}
+      <div>
+        <a href="{{ .RelPermalink }}">Read More?</a>
+      </div>
+      {{ end }}
+    </article>
+{{ end }}
+</div>
+{{ end }}
