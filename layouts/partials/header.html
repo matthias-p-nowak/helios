@@ -1,4 +1,14 @@
-<div class="header">
-{{ partial "breadcrumb.html" . }}
+<header>
+<a class="skip-navigation" href="#main-content">jump to content</a>
 <comment type="{{ .Type }}" />
+</header>
+<div class="helios-menu">
+{{ with $.Site.Params.logo  }}
+<img class="helios-logo" src="{{ $.Site.BaseURL }}/{{ . }}" alt="logo" />
+{{ end }}
+
+{{ partial "menu.html" . }}
+</div>
+<div class="helios-breadcrumb">
+{{ partial "breadcrumb.html" . }}
 </div>

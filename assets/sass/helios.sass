@@ -1,0 +1,141 @@
+@import fonts.sass
+
+.skip-navigation
+  color: black
+  // box-shadow: 0 0 1rem #CFF
+  background: white
+  text-decoration: none
+  border-radius: 0.5rem
+  transition: 0.5s
+  position: absolute;
+  top: -5rem
+  padding: 1rem
+  margin: 1rem
+  font-weight: 700
+  &:focus
+    top: 0rem
+  &:visited
+    color: inherit
+  
+body
+  color: black
+  background: #fafafa
+  font-family: Cambria
+  background: #DDD3
+
+.container
+  display: flex
+  justify-content: center
+  
+.middle
+  background: #CFF3
+  display: block
+  margin: auto
+  &:after
+    display: table
+    content: ""
+    clear: both
+    
+.column
+  float: left
+  margin: 0.5rem
+  // padding: 1rem
+  width: auto
+
+.helios-breadcrumb
+  clear: both
+  ol
+    // background: yellow
+    background: #FF63
+    display: inline
+    margin: 0 auto 0 0
+    list-style: none
+    padding: 5px;
+  li
+    display: inline
+    a
+      text-decoration: none
+  li+li:before
+    content: "\2192"
+
+.helios-content
+  background: #FFC6
+  border: thin solid #F001
+  padding: 0.5em
+  ul
+    padding-left: 0.75em
+    margin-top: 0.25em
+    margin-bottom: 0.25em
+    & a
+      text-decoration: none
+.helios-logo
+  max-width: 5rem
+  max-height: 5rem
+.helios-menu
+  font-family: Perpetua
+  ol
+    margin: 0
+    padding: 0
+    float: right
+    display: inline
+    li
+      padding: 3px
+      display: inline
+      a
+        transition: 0.3s
+        font-size: 1.5rem
+        text-decoration: none
+        color: black
+      a:hover, a:focus
+        background: white
+        font-size: 2.0rem;
+        box-shadow: 0px 0px 5px 5px #f0f0f0;
+
+    
+.helios-post-list 
+  h4
+    margin-top: 0.5rem
+    margin-bottom: 0.5rem
+  .helios-post-summary
+    margin-left: 1rem
+  a
+    text-decoration: none
+    color: black
+    &::after
+      clear: both
+  .helios-post-time
+    text-align: right
+    font-size: 0.7em
+.helios-list-sep
+  color: #CCC3
+
+main
+  background: white
+  max-width: 60rem
+  padding: 0.5rem
+  blockquote
+    background: #FF03
+    padding: 1px 1px 1px 0.5rem
+    margin: 0 0 0 1rem
+    border-left: 3px #CCCC solid
+    p
+      margin: 0
+    p+p
+      margin-top: 0.5rem
+table
+  border-collapse: collapse
+  margin: 0.5rem
+  & td,th
+    border: 1px solid #CCCC
+    padding: 0.5rem
+  & th
+    background: #CCC3
+    border-bottom: 2px solid #CCCF
+  & tr:nth-child(even)
+    background-color: #CCC3
+  & tr:hover
+    background-color: #CCC6
+
+footer
+  background: #FCC3
+  margin: 0.5rem

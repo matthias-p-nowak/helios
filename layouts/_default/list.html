@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html >
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <h1>{{ .Title }}</h1>
-        {{ range .Pages }}
-        {{ printf "%+#v" .Title }}
-        <div>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <div class="helios-post-description">{{ .Description }}</div>
-        <div class="helios-post-summary">{{ .Summary | plainify | safeHTML }}</div>
-        <hr class="helios-post-divider" />
-        </div>
-        {{ end }}
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ define "main" }}
+<comment from="single.html" />  
+<h1>{{ .Title }}</h1>
+<main class="helios-post-list">
+{{ range .Pages }}
+<a href="{{ .RelPermalink }}">
+<h4>{{ .Title }}</h4>
+<div class="helios-post-description">{{ .Description }}</div>
+<div class="helios-post-summary">{{ .Summary | plainify | safeHTML }}</div>
+<div class="helios-post-time"><time>{{ .Date.Format "2006-01-02" }}</time></div>
+</a>
+{{ if .PrevInSection }}
+<hr class="helios-list-sep" width="80%" />
+{{ end }}
+{{ end }}
+</main>
+
+{{ end }}

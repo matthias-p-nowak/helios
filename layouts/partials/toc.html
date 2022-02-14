@@ -1,0 +1,9 @@
+{{ if not .Params.notoc }}
+<comment from="toc.html"></comment>
+{{ if gt (len .TableOfContents) 32 }}
+<div class="helios-content">
+{{.TableOfContents }}
+</div>
+{{ end }}
+{{ end }}
+
