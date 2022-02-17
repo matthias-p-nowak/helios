@@ -1,5 +1,5 @@
 <header>
-<a class="skip-navigation" href="#main-content">jump to content</a>
+<a class="helios-skip-navigation" href="#helios-main-content">jump to content</a>
 <comment type="{{ .Type }}" />
 </header>
 <div class="helios-menu">
@@ -9,6 +9,8 @@
 
 {{ partial "menu.html" . }}
 </div>
+{{ if .Params.breadcrumb | default true }}
 <div class="helios-breadcrumb">
 {{ partial "breadcrumb.html" . }}
 </div>
+{{ end }}

@@ -2,14 +2,14 @@
 <html >
   {{- partial "head.html" . -}}
   <body>
-    <div class="container">
-    <div class="con-center">
+    <div class="helios-container">
+    <div class="helios-content">
       {{- partial "header.html" . -}}
-      <div class="middle">
-      <aside class="column">
+      <div class="helios-middle">
+      <aside class="helios-column">
       {{ partial "toc.html" . }}
       </aside>        
-      <main id="main-content" class="column">
+      <main id="helios-main-content" class="helios-column">
       {{- block "main" . }}{{- end }}
       </main>
       </div>

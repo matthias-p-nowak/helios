@@ -1,26 +1,17 @@
-{{ define "main" }}
-<meta from="index.html"/>
-<h1 class="hugo-home-title">{{ .Title }}</h1>
-{{ .Content }}
-<pre>
- {{ printf "%+#v" .Title
- }}
-</pre>
-
-<div class="hugo-first-10-posts">
-{{ range first 10 .Site.RegularPages }}
-    <article>
-     
-      <div>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ .Summary | plainify | safeHTML }}
+<!DOCTYPE html>
+<html >
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="helios-container">
+    <div class="helios-content">
+      {{- partial "header.html" . -}}
+      <div class="helios-middle">   
+      <main id="helios-main-content" class="helios-column">
+     {{ .Content }}
+      </main>
       </div>
-      {{ if .Truncated }}
-      <div>
-        <a href="{{ .RelPermalink }}">Read More?</a>
+      {{- partial "footer.html" . -}}
       </div>
-      {{ end }}
-    </article>
-{{ end }}
-</div>
-{{ end }}
+      </div>
+  </body>
+</html>
