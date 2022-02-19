@@ -3,14 +3,16 @@
   {{- partial "head.html" . -}}
   <body>
     <div class="helios-container">
-    <div class="helios-content">
+    <div >
       {{- partial "header.html" . -}}
       <div class="helios-middle">
       <aside class="helios-column">
       {{ partial "toc.html" . }}
       </aside>        
       <main id="helios-main-content" class="helios-column">
-      {{- block "main" . }}{{- end }}
+{{- block "main" . }}
+the default main block
+{{- end }}
       </main>
       </div>
       {{- partial "footer.html" . -}}

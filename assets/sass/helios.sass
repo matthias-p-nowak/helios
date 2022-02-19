@@ -16,7 +16,7 @@
     top: 0rem
   &:visited
     color: inherit
-  
+
 body
   color: black
   background: #fafafa
@@ -26,7 +26,11 @@ body
 .helios-container
   display: flex
   justify-content: center
-  
+  div
+    background: #FFC3
+    // border: thin solid #F993
+    padding: 3px
+
 .helios-middle
   background: #CFF3
   display: block
@@ -35,7 +39,7 @@ body
     display: table
     content: ""
     clear: both
-    
+
 .helios-column
   float: left
   margin: 0.5rem
@@ -62,12 +66,18 @@ body
   background: #FFC6
   border: thin solid #F001
   padding: 0.5em
+  nav
+    padding: 0.5rem
+    li::marker
+      color: red
+      content: ''
   ul
-    padding-left: 0.75em
+    padding-left: 0.5em
     margin-top: 0.25em
     margin-bottom: 0.25em
     & a
       text-decoration: none
+
 .helios-logo
   max-width: 5rem
   max-height: 5rem
@@ -82,17 +92,19 @@ body
       padding: 3px
       display: inline
       a
-        transition: 0.3s
-        font-size: 1.5rem
+        transition: 0.1s
+        font-size: 1.25rem
         text-decoration: none
         color: black
       a:hover, a:focus
         background: white
-        font-size: 2.0rem;
-        box-shadow: 0px 0px 5px 5px #f0f0f0;
+        font-size: 1.5rem;
+        // border: thin solid #66F3
+        // padding: 5px
+        // box-shadow: 0px 0px 5px 5px #f0f0f0;
 
-    
-.helios-post-list 
+
+.helios-post-list
   h4
     margin-top: 0.5rem
     margin-bottom: 0.5rem
@@ -109,6 +121,29 @@ body
 .helios-list-sep
   color: #CCC3
 
+.chroma .lntable td:first-child
+  padding-right: 0.2rem
+
+.chroma td
+  position: relative
+  .helios-copier
+    background: white
+    border-radius: 0.5rem
+    position: absolute
+    top: 0
+    right: 0
+    opacity: 0;
+    transition: opacity 0.3s;
+    visibility: hidden;
+    img
+      width: 1rem
+      height: 1rem
+      background: inherit
+      content: url('../img/copy.svg')
+  &:hover .helios-copier
+    opacity: 1;
+    visibility: visible;
+
 main
   background: white
   max-width: 60rem
@@ -124,6 +159,35 @@ main
       margin: 0
     p+p
       margin-top: 0.5rem
+  h1, h2, h3, h4, h5, h6
+    color: #600
+    font-family: Perpetua
+    font-weight: bold
+    margin-top: 1rem
+    margin-bottom: 0
+  & > p
+    margin-top: 0
+    margin-bottom: 0.5rem
+    // color: green
+  h6
+    font-size: 1.25rem
+    margin-left: 3rem
+  h5
+    font-size: 1.5rem
+    margin-left: 2.5rem
+  h4
+    font-size: 1.75rem
+    margin-left: 2rem
+  h3
+    font-size: 2rem
+    margin-left: 1.5rem
+  h2
+    font-size: 2.25rem
+    margin-left: 1rem
+  h1
+    font-size: 2.5rem
+    margin-left: 0.5rem
+
 table
   border-collapse: collapse
   margin: 0.5rem
@@ -141,3 +205,15 @@ table
 footer
   background: #FCC3
   margin: 0.5rem
+  .social-info
+    svg
+      // max-width: 24px
+      max-height: 2rem
+  // .social-logo
+    // color: rgb(10, 102, 194)
+  .footer-info
+    svg
+      max-height: 1rem
+      max-width: 1rem
+
+    

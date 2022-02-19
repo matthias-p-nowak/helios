@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html >
-  {{- partial "head.html" . -}}
-  <body>
-    <div class="helios-container">
-    <div class="helios-content">
-      {{- partial "header.html" . -}}
-      <div class="helios-middle">   
-      <main id="helios-main-content" class="helios-column">
-     {{ .Content }}
-      </main>
-      </div>
-      {{- partial "footer.html" . -}}
-      </div>
-      </div>
-  </body>
-</html>
+{{ define "main" }}
+This is from layouts/index.html
+{{ .Content }}
+
+ <div>
+  {{ with .Site.RegularPages }}
+   <ul>
+  {{ range . }}
+     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+   </ul>
+   {{ else }}
+   no regular pages found 
+   {{ end }}
+ </div>
+{{ end }}

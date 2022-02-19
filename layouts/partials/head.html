@@ -1,5 +1,5 @@
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta lang="{{ .Site.LanguageCode  }}"/>
 {{ hugo.Generator }}
 <title>{{ .Site.Title -}}: {{- .Page.Title }}</title>
@@ -7,7 +7,7 @@
 <link rel="icon" type="image/x-icon" href="{{ $.Site.BaseURL }}/{{ . }}"/>
 {{ end }}
 {{ $style := resources.Get "sass/helios.sass" | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" type="text/css" media="all" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-<!-- <link href="{{ .Site.BaseURL }}/css/helios.css" rel="stylesheet" type="text/css" media="all"> -->
-<link href="{{ .Site.BaseURL }}/css/chroma.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" media="all" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+<link href="{{ .Site.BaseURL }}css/chroma.css" rel="stylesheet" type="text/css" media="all" />
+<script src="{{ .Site.BaseURL }}js/helios-copy.js" defer="true" > </script>
 </head>

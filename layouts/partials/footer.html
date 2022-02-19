@@ -1,5 +1,26 @@
 <footer>
-<comment from="footer" />
-source: {{ .Path }} {{ now.Format "15:04:05" }}
-<span class="hugo-pages"> {{ $.Site.Pages | len }}</span>
+<comment from="footer" ></comment>
+<div class="social-info">
+{{ with $.Site.Params.FaceBook }}
+<a href="https://facebook.com/{{ . }}" target="_blank">{{ partial "svg/facebook.svg" . }}</a>
+{{ end }}
+{{ with $.Site.Params.GitHub }}
+<a href="https://github.com/{{ . }}" target="_blank">{{ partial "svg/github.svg" . }}</a>
+{{ end }}
+{{ with $.Site.Params.LinkedIn }}
+<a href="https://www.linkedin.com/in/{{ . }}" target="_blank">{{ partial "svg/linkedin.svg" . }}</a>
+{{ end }}
+</div>
+<div class="footer-info">
+created with <a href="https://gohugo.io/" target="_blank">{{ partial "svg/gohugo.svg" . }} Hugo</a> with theme 
+<a href="https://github.com/matthias-p-nowak/helios" target="_blank">Helios</a>
+<br />
+{{ $path := "" }}
+{{ with .File }}
+  {{ $path = .Path }}
+{{ else }}
+  {{ $path = .Path }}
+{{ end }}
+<span class="source-info"> source: {{ $path }}, compiled {{ now.Format "15:04:05" }}, total pages: {{ $.Site.Pages | len }}</span>
+</div>
 </footer>
