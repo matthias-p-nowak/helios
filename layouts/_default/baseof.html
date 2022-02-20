@@ -21,8 +21,7 @@ the default main block
       {{- partial "footer.html" . -}}
       </div>
       </div>
-      {{ if $.Site.Params.debug }}
-      including debug info
+      {{ if fileExists "/layouts/partials/debug.html" }}
       {{ partial "debug.html" . }}
       {{ end }}
   </body>

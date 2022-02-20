@@ -1,10 +1,12 @@
 <ol>
-<li><a href="{{ .Site.BaseURL }}">Home</a></li>
+{{ $page:=.Page }}
 {{ with $m:=$.Site.Menus.main }}
-{{ range sort $m }}
-<li><a href="{{.URL }}">{{ .Name }}</a></li>
+{{ range $me:= sort $m }}
+{{ if eq $page.Section $me.Identifier }}
+<li><a href="{{ $me.URL }}" class="helios-current-section"><b>{{ $me.Name }}</b></a></li>
+{{ else }}
+<li><a href="{{ $me.URL }}">{{ $me.Name }}</a></li>
 {{ end }}
 {{ end }}
-<li><a href="{{ .Site.BaseURL }}tags">Tags</a></li>
-<li><a href="{{ .Site.BaseURL }}categories">Categories</a></li>
+{{ end }}
 </ol>
