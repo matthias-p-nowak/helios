@@ -1,9 +1,11 @@
 {{ define "main" }}
 <comment from="single.html" />  
 <h1>{{ .Title }}</h1>
+{{ .Content }}
+<hr class="helios-decent-hr" />
 <main class="helios-post-list">
 {{ range .Pages }}
-<a href="{{ .RelPermalink }}">
+<a href="{{ .Permalink }}">
 <h4>{{ .Title }}</h4>
 <div class="helios-post-description">{{ .Description }}</div>
 <div class="helios-post-summary">{{ .Summary | plainify | safeHTML }}</div>

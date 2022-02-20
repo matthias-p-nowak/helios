@@ -14,9 +14,16 @@
 the default main block
 {{- end }}
       </main>
+      <div id="helios-meta-info" class="helios-column">
+      {{- partial "meta.html" . -}}
+      </div>
       </div>
       {{- partial "footer.html" . -}}
       </div>
       </div>
+      {{ if $.Site.Params.debug }}
+      including debug info
+      {{ partial "debug.html" . }}
+      {{ end }}
   </body>
 </html>

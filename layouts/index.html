@@ -1,16 +1,6 @@
 {{ define "main" }}
-This is from layouts/index.html
+<h1>{{ .Title }}</h1>
+{{ .Description }}
+<hr class="helios-decent-hr"/>
 {{ .Content }}
-
- <div>
-  {{ with .Site.RegularPages }}
-   <ul>
-  {{ range . }}
-     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-  {{ end }}
-   </ul>
-   {{ else }}
-   no regular pages found 
-   {{ end }}
- </div>
 {{ end }}

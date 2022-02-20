@@ -6,6 +6,7 @@
 {{ with $.Site.Params.logo  }}
 <img class="helios-logo" src="{{ $.Site.BaseURL }}/{{ . }}" alt="logo" />
 {{ end }}
+<span class="helios-site-title">{{ $.Site.Title }}</span>
 
 {{ partial "menu.html" . }}
 </div>

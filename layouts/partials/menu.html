@@ -1,7 +1,10 @@
 <ol>
-<li><a href="#">Home</a></li>
-<li><a href="#">Posts</a></li>
-<li><a href="#">Projects</a></li>
-<li><a href="#">Tags</a></li>
-<li><a href="#">Categories</a></li>
+<li><a href="{{ .Site.BaseURL }}">Home</a></li>
+{{ with $m:=$.Site.Menus.main }}
+{{ range sort $m }}
+<li><a href="{{.URL }}">{{ .Name }}</a></li>
+{{ end }}
+{{ end }}
+<li><a href="{{ .Site.BaseURL }}tags">Tags</a></li>
+<li><a href="{{ .Site.BaseURL }}categories">Categories</a></li>
 </ol>
