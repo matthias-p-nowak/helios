@@ -21,6 +21,5 @@ created with <a href="https://gohugo.io/" target="_blank">{{ partial "svg/gohugo
 {{ else }}
   {{ $path = .Path }}
 {{ end }}
-<span class="source-info"> source: {{ $path }}, compiled {{ now.Format "15:04:05" }}, total pages: {{ $.Site.Pages | len }}</span>
 </div>
 </footer>

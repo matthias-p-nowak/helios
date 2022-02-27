@@ -1,6 +1,8 @@
 ---
 {{ if eq  .Page.File.BaseFileName "_index" -}}
 title: {{ .Section | title }}
+date: {{ .Date }}
+description:
 menu:
   main:
     weight: 1
@@ -12,12 +14,10 @@ date: {{ .Date }}
 draft: true
 description: 
 tags:
-from: normal archetype in themes/helios
 ---
 
 This is the default.md file from the theme
 <!--more-->
 and there is more
-{{ printf "%#+v" .Page.File.BaseFileName }}
 
 {{ end }}

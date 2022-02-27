@@ -2,7 +2,6 @@
 
 .helios-skip-navigation
   color: black
-  // box-shadow: 0 0 1rem #CFF
   background: white
   text-decoration: none
   border-radius: 0.5rem
@@ -19,7 +18,6 @@
 
 body
   color: black
-  background: #fafafa
   font-family: Cambria
   background: #DDD3
 
@@ -27,12 +25,11 @@ body
   display: flex
   justify-content: center
   div
-    background: #FFC3
-    // border: thin solid #F993
+    // background: #FFC3
+    border-shadow: 0 0 1px #F993
     padding: 3px
 
 .helios-middle
-  background: #CFF3
   display: block
   margin: auto
   &:after
@@ -47,8 +44,8 @@ body
   width: auto
 
 #helios-meta-info
-  background: #FFC6
-  border: thin solid #F001
+  background: white
+  box-shadow: 0 0 5px #FCC3
   padding: 0.5em
   ul
     margin: 0
@@ -67,8 +64,7 @@ body
 .helios-breadcrumb
   clear: both
   ol
-    // background: yellow
-    background: #FF63
+    box-shadow: 0 0 2px #9993
     display: inline
     margin: 0 auto 0 0
     list-style: none
@@ -81,8 +77,10 @@ body
     content: "\2192"
 
 .helios-content
-  background: #FFC6
-  border: thin solid #F001
+  // background: #FFC3
+  background: white
+  // box-shadow: 0 0 2px #6633
+  box-shadow: 0 0 5px #FCC3
   padding: 0.5em
   nav
     padding: 0.5rem
@@ -164,6 +162,10 @@ h1.helios-page-title
     font-size: 0.7em
 .helios-list-sep
   color: #CCC3
+
+pre.chroma
+  padding-left: 0.2rem
+  padding-right: 0.5rem
 
 .chroma .lntable td:first-child
   padding-right: 0.2rem
@@ -256,7 +258,9 @@ table
     background-color: #CCC6
 
 footer
-  border: thin solid #FCC3
+  // border: thin solid #FCC3
+  box-shadow: 0 0 5px #FCC3
+  text-align: center
   margin: 0.5rem
   .social-info
     a
