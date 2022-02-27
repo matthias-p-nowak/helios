@@ -1,0 +1,4 @@
+{{ $url :=  ( print site.BaseURL .Destination ) | safeURL }}
+<img class="helios-image" src="{{ $url }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+
+
