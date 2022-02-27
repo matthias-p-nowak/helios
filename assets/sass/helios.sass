@@ -188,6 +188,15 @@ h1.helios-page-title
     opacity: 1;
     visibility: visible;
 
+details
+  position: relative
+  summary.right
+    float: right
+  summary.left
+    position: absolute
+    top: 0.2rem
+    left: 0.3rem
+
 main
   background: white
   max-width: 50rem
@@ -247,14 +256,31 @@ table
     background-color: #CCC6
 
 footer
-  background: #FCC3
+  border: thin solid #FCC3
   margin: 0.5rem
   .social-info
+    a
+      position: relative
+      .tooltip
+        position: absolute
+        top: 1rem
+        left: 0
+        display: none
+        background: white
+        z-index: 20
+        padding: 0.5rem
+        border: thin solid #F996
+      &:hover .tooltip
+        display: block
+    img
+      height: 1.5rem
+      padding: 0.1rem
+    tooltip
+      background: red
+    title
+      background: yellow
     svg
-      // max-width: 24px
       max-height: 2rem
-  // .social-logo
-    // color: rgb(10, 102, 194)
   .footer-info
     svg
       max-height: 1rem

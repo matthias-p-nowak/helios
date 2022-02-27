@@ -1,14 +1,14 @@
 <footer>
 <comment from="footer" ></comment>
 <div class="social-info">
-{{ with $.Site.Params.FaceBook }}
-<a href="https://facebook.com/{{ . }}" target="_blank">{{ partial "svg/facebook.svg" . }}</a>
+{{ with $social:=$.Site.Params.social }}
+{{ range $i, $s:=$social  }}
+{{ $url:= urls.Parse $s }}
+<a href="{{ $s }}" target="_blank">
+<img src="{{ $url.Scheme }}://{{ $url.Host }}/favicon.ico" alt="{{ $s }}"/>
+<div class="tooltip">{{ $s }}</div>
+</a>
 {{ end }}
-{{ with $.Site.Params.GitHub }}
-<a href="https://github.com/{{ . }}" target="_blank">{{ partial "svg/github.svg" . }}</a>
-{{ end }}
-{{ with $.Site.Params.LinkedIn }}
-<a href="https://www.linkedin.com/in/{{ . }}" target="_blank">{{ partial "svg/linkedin.svg" . }}</a>
 {{ end }}
 </div>
 <div class="footer-info">

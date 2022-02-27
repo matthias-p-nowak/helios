@@ -8,15 +8,15 @@
       <div class="helios-middle">
       <aside class="helios-column">
       {{ partial "toc.html" . }}
-      </aside>        
+      </aside>
       <main id="helios-main-content" class="helios-column">
 {{- block "main" . }}
 the default main block
 {{- end }}
       </main>
-      <div id="helios-meta-info" class="helios-column">
+      <aside class="helios-column">
       {{- partial "meta.html" . -}}
-      </div>
+      </aside>
       </div>
       {{- partial "footer.html" . -}}
       </div>

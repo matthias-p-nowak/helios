@@ -1,11 +1,16 @@
 {{ if eq .Kind "page" }}
 {{ $bu := .Site.BaseURL }}
 {{ with .Params.tags }}
+<details open="true">
+<summary class="left"></summary>
+<div id="helios-meta-info" >
 <h6>Tags</h6>
 <ul>
 {{ range . }}
 <li><a href="{{ $bu }}/tags/{{ . }}/">{{ . }}</a></li>
 {{ end }}
 </ul>
+</div>
+</details>
 {{ end }}
 {{ end }}

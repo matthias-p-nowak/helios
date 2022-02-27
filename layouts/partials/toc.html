@@ -1,9 +1,12 @@
 {{ if .Params.toc | default true }}
 <comment from="toc.html"></comment>
 {{ if gt (len .TableOfContents) 32 }}
+<details open="true">
+<summary class="right"></summary>
 <div class="helios-content">
 {{.TableOfContents }}
 </div>
+</details>
 {{ end }}
 {{ end }}
 
