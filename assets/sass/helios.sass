@@ -167,8 +167,13 @@ pre.chroma
   padding-left: 0.2rem
   padding-right: 0.5rem
 
-.chroma .lntable td:first-child
-  padding-right: 0.2rem
+div.chroma
+  background: inherit
+
+.chroma .lntable
+  background: inherit
+  td:first-child
+    padding-right: 0.2rem
 
 .chroma td
   position: relative
@@ -242,7 +247,11 @@ main
   h1
     font-size: 2.5rem
     margin-left: 0.5rem
-
+  hr
+    height: 1px
+    width: 50%
+    border : 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black , rgba(0, 0, 0, 0)); 
 table
   border-collapse: collapse
   margin: 0.5rem
