@@ -3,9 +3,9 @@
 {{ with $m:=$.Site.Menus.main }}
 {{ range $me:= sort $m }}
 {{ if eq $page.Section $me.Identifier }}
-<li><a href="{{ $me.URL }}" class="helios-current-section"><b>{{ $me.Name }}</b></a></li>
+<li><a href="{{ $me.URL | relURL }}" class="helios-current-section"><b>{{ $me.Name }}</b></a></li>
 {{ else }}
-<li><a href="{{ $me.URL }}">{{ $me.Name }}</a></li>
+<li><a href="{{ $me.URL | relURL }}">{{ $me.Name }}</a></li>
 {{ end }}
 {{ end }}
 {{ end }}

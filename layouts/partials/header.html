@@ -4,7 +4,7 @@
 </header>
 <div class="helios-menu">
 {{ with $.Site.Params.logo  }}
-<img class="helios-logo" src="{{ $.Site.BaseURL }}/{{ . }}" alt="logo" />
+<img class="helios-logo" src="{{ $.Site.BaseURL | relURL}}/{{ . }}" alt="logo" />
 {{ end }}
 <span class="helios-site-title">{{ $.Site.Title }}</span>
 
