@@ -3,9 +3,9 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 <hr class="helios-decent-hr" />
-<main class="helios-post-list">
+<!-- <main class="helios-post-list"> -->
 {{ range .Pages }}
-<a href="{{ .Permalink }}">
+<a href="{{ .Permalink }}" class="helios-list-item">
 <h4>{{ .Title }}</h4>
 <div class="helios-post-description">{{ .Description }}</div>
 <div class="helios-post-summary">{{ .Summary | plainify | safeHTML }}</div>
@@ -15,6 +15,6 @@
 <hr class="helios-list-sep" width="80%" />
 {{ end }}
 {{ end }}
-</main>
+<!-- </main> -->
 
 {{ end }}

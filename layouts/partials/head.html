@@ -1,6 +1,7 @@
 <head>
 <meta charset="utf-8" />
 <meta lang="{{ .Site.LanguageCode  }}"/>
+<meta name="description" content="{{ .Page.Description}}" />
 {{ hugo.Generator }}
 <title>{{ .Site.Title -}}: {{- .Page.Title }}</title>
 {{ with $.Site.Params.favicon }}
