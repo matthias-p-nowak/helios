@@ -21,12 +21,12 @@
 {{ end }}
 {{ end }}
 {{ end }}
-{{ $style := resources.Get "sass/helios.sass" | resources.ToCSS | resources.Fingerprint }}
+{{ $style := resources.Get "sass/helios.sass" | css.Sass | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="all" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
 <link href="{{ .Site.BaseURL | relURL }}/css/chroma.css" rel="stylesheet" type="text/css" media="all" />
 <script src="{{ .Site.BaseURL | relURL }}/js/helios-copy.js" defer="true" > </script>
 {{ range $.Site.Params.Sass }}
-{{ $style := resources.Get . | resources.ToCSS | resources.Fingerprint }}
+{{ $style := resources.Get . | css.Sass | resources.Fingerprint }}
 <link rel="stylesheet" type="text/css" media="all" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
 {{ end }}
 </head>
